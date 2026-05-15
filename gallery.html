@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Classic - Blog Page</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400"> 
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                     
+    <link rel="stylesheet" href="css/style.css">
+
+	<style> * {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: #666;
+   color: white;
+}
+	
+		</style>
+
+</head>
+
+    <body>
+       
+        <div class="header">
+            <div class="container-fluid">
+                <div class="header-inner">
+                    <a href="index.html" class="navbar-brand site-name"><img src="Img/Misson coin laundry logo.jpg" height="110" alt=""/></a>
+                    
+            
+                    <nav class="navbar main-nav">
+
+                        <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#tmNavbar">
+                            &#9776;
+                        </button>
+                        
+                        <div class="collapse navbar-toggleable-sm" id="tmNavbar">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item">
+                                    <a href="index.html" class="nav-link">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="about.html" class="nav-link">About</a>
+                                </li>
+								 <li class="nav-item">
+                                    <a href="services.html" class="nav-link">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="gallery.html" class="nav-link">Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="contact.html" class="nav-link">Contact</a>
+                                </li>
+                            </ul>                        
+                        </div>
+                        
+                    </nav>  
+
+                </div>                                  
+            </div>            
+        </div>
+
+        <div class="about-img-container">
+            
+        </div>
+
+        <section class="section">
+            <div class="container-fluid">
+              <div class="row">
+				<h2>PORTFOLIO</h2>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('nature')"> Inside</button>
+  <button class="btn" onclick="filterSelection('cars')"> Outside</button>
+  <button class="btn" onclick="filterSelection('people')"> Inside</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="img/machines1.jpg" alt="Mountains" style="width:100%">
+      <h4>Washing machines</h4>
+      <p>We recently upgraded our machines to high capacity.</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="img/machines2.jpg" alt="Lights" style="width:100%">
+      <h4>Folding services&nbsp;</h4>
+      <p>&nbsp;Our folding stations ar clean and sanitary.</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+      <img src="img/machines3.jpg" alt="Nature" style="width:100%">
+      <h4>Wood Floors</h4>
+      <p>We've recently remodeled the main area.&nbsp;</p>
+    </div>
+  </div>
+
+  <div class="column cars">
+    <div class="content">
+      <img src="img/outside1.jpg" alt="Car" style="width:100%">
+      <h4>Safe and Clean&nbsp;</h4>
+      <p>Our facility is well-lit and safe for all.&nbsp;</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <img src="img/outside2.jpg" alt="Car" style="width:100%">
+      <h4>Convenient </h4>
+      <p>You can easily drive up to drop off clothing.&nbsp; &nbsp;</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <img src="img/outside3.jpg" alt="Car" style="width:100%">
+      <h4>Family Friendly&nbsp;</h4>
+      <p>The location is close to all major highways&nbsp;</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <img src="img/inside1.jpg" alt="People" style="width:100%">
+      <h4>Spacious Folding Area</h4>
+      <p>Enjoy plenty of clean counter space and modern dryers, making it easy to sort and fold your laundry comfortably.</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+      <img src="img/inside2.jpg" alt="People" style="width:100%">
+      <h4>Large Selection of Washers</h4>
+      <p>Our facility offers numerous high-capacity washers so you’ll always find an available machine—no waiting, no hassle.</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+      <img src="img/inside3.jpg" alt="People" style="width:100%">
+      <h4>Snacks &amp; Essentials</h4>
+      <p>Grab a quick snack or laundry essentials from our fully stocked vending machines while you wait.</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+                
+                </div>
+                
+            </div>
+        </section>
+        
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                        
+                        <div class="footer-content-box">
+                            <h3 class="gold-text title footer-content-box-title">Proin eu posuere felis</h3>
+                            <div class="gray-bg">
+                                <p>Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
+                                <p>Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
+                                <p><strong>Danny Egg (Executive)</strong></p>    
+                            </div>    
+                        </div>
+                                                
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                        <div class="footer-content-box footer-links-container">
+                        
+                            <h3 class="gold-text title footer-content-box-title">Nulla tortor dolor</h3>
+                            <nav>
+                                <ul class="nav">
+                                    <li><a href="#" class="footer-link">Tincidunt non faucibus</a></li>
+                                    <li><a href="#" class="footer-link">Vestibulum tempor</a></li>
+                                    <li><a href="#" class="footer-link">Fusce non turpis euismod</a></li>
+                                    <li><a href="#" class="footer-link">Lorem ipsum dolor sit</a></li>
+                                    <li><a href="#" class="footer-link">Nam in augue consectetur</a></li>
+                                    <li><a href="#" class="footer-link">Text Link Color #CCCC66</a></li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                        
+                    </div>
+
+
+                    <div class="clearfix hidden-lg-up"></div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+
+                        <div class="footer-content-box">
+                        
+                            <h3 class="gold-text title footer-content-box-title">Etiam mollis ornare</h3>
+                            <p class="margin-b-30">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p><hr class="margin-b-30">
+                            <p class="margin-b-30">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p><hr class="margin-b-30">
+                            <p class="margin-b-30">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
+                            <a href="#" class="btn btn-gray text-uppercase">Read More</a>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+
+                        <div class="footer-content-box">
+                        
+                            <h3 class="gold-text title footer-content-box-title">Fusce non turpis</h3>
+                            <div class="margin-b-30">
+                                <img src="img/img-100x100-1.jpg" alt="Image" class="footer-thumbnail">
+                                <img src="img/img-100x100-2.jpg" alt="Image" class="footer-thumbnail">
+                                <img src="img/img-100x100-3.jpg" alt="Image" class="footer-thumbnail">
+                                <img src="img/img-100x100-4.jpg" alt="Image" class="footer-thumbnail">
+                                <img src="img/img-100x100-5.jpg" alt="Image" class="footer-thumbnail">
+                                <img src="img/img-100x100-6.jpg" alt="Image" class="footer-thumbnail">
+                            </div>
+                            <p class="margin-b-20">Curabitur dui massa, aliquam quis mi sed, tempor vulputate tellus. Sed vestibulum non neque.</p>
+                            <a href="#" class="btn btn-gray text-uppercase">Browse</a>
+
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 copyright-col">
+                        <p class="copyright-text">Copyright 2016 Your Company Name</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script> 
+        <script src="js/bootstrap.min.js"></script>
+		<script> filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+		
+		</script>
+       
+</body>
+</html>
